@@ -1,0 +1,221 @@
+/* Start variable's */
+
+ :root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsla(0, 0%, 73%, 0.938);
+    --Light-grayish-blue: hsl(210, 46%, 95%)
+}
+
+
+/* End variable's */
+
+
+/* Start Global roles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    Font-size: 13px
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* End Global roles */
+
+
+/*------ start components ------*/
+
+
+/*------ End components ------*/
+
+
+/* -------Start Media Queries------- */
+
+
+/* -----Small----- */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* Medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* -------End Media Queries------- */
+
+
+/* start main style */
+
+section {
+    padding: 4em 1.5em;
+}
+
+section .container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: grid;
+    gap: 2em;
+}
+
+@media(min-width: 991px) {
+    section .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+        ;
+    }
+}
+
+section .holder {
+    padding: 1.5em 2em;
+    border-radius: 0.7em;
+    color: white;
+}
+
+section .holder .john-Doe {
+    display: flex;
+    margin-bottom: 1.5em;
+    text-transform: capitalize;
+}
+
+section .holder .john-Doe img {
+    width: 3em;
+    border-radius: 50%;
+    margin-right: 0.9em;
+    border: 0.2em solid var(--Light-gray);
+}
+
+section .john-Doe .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1em;
+}
+
+section .john-Doe .name span {
+    color: var(--Light-gray);
+    font-size: 0.8em;
+}
+
+section .info .about {
+    font-size: 1.6em;
+    margin-bottom: 1em;
+}
+
+section .info .about-info {
+    color: var(--Light-gray);
+    font-size: 0.7;
+    line-height: 1.4;
+}
+
+section .daniel {
+    background-color: var(--Moderate-violet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+}
+
+section .jonathan {
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+section .jeanette,
+section .kira {
+    background-color: white;
+    color: var(--Very-dark-grayish-blue)
+}
+
+@media(min-width: 991px) {
+    section .daniel {
+        grid-column: span 2;
+    }
+    section .kira {
+        grid-column: 4;
+        grid-row: 1/span 2;
+    }
+    section .patrick {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+}
+
+section .patrick {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+
+/* End main style */
+
+
+/* -------start footer------- */
+
+
+/* start frontend mentor */
+
+.attribution {
+    padding: 1em;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--Moderate-violet);
+}
+
+
+/* End frontend mentor */
+
+
+/* -------End footer------- */
